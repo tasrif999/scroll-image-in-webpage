@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking and Scrolling Image</title>
+    <style>
+        /* Style for blinking effect */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .blinking-image {
+            animation: blink 1s infinite;
+        }
+
+        /* Style for scrolling image effect */
+        .scrolling-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .scrolling-image {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Blinking and Scrolling Image Demo</h2>
+
+    <!-- Blinking Image -->
+    <div>
+        <img src="https://via.placeholder.com/150" alt="Blinking Image" class="blinking-image">
+    </div>
+
+    <!-- Scrolling Image -->
+    <div class="scrolling-container">
+        <img src="https://via.placeholder.com/150" alt="Scrolling Image" class="scrolling-image">
+    </div>
+    
+</body>
+</html>
